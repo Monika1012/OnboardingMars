@@ -8,7 +8,7 @@ namespace MarsQA_1.Steps {
     [Binding]
     public sealed class AddProfileDetailSteps {
         [Given(@"I login to the website with (.*) and (.*)")]
-        public void GivenILoginToTheWebsiteWithAnd(string username, string password) {
+        public void GivenILoginToTheWebsiteWithAnd(string p0, string p1) {
             ScenarioContext.Current.Pending();
         }
 
@@ -17,70 +17,56 @@ namespace MarsQA_1.Steps {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"I enter following details in the form and click save button")]
-        public void WhenIEnterFollowingDetailsInTheFormAndClickSaveButton(Table table) {
+        [When(@"I Click on the Tab (.*)")]
+        public void WhenIClickOnTheTab(string p0) {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"Details Saved message appears")]
-        public void ThenDetailsSavedMessageAppears() {
+        [When(@"Click on Add New Button")]
+        public void WhenClickOnAddNewButton() {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"The new created profiles shows up in the grid with profile name (.*)")]
-        public void ThenTheNewCreatedProfilesShowsUpInTheGridWithProfileName(string p0) {
-            ScenarioContext.Current.Pending();
-        }
-        //New Stuff
-        [When(@"I Click on New Profile button")]
-        public void WhenIClickOnNewProfileButton() {
+        [Then(@"A New Row Editable Row is added on the Grid")]
+        public void ThenANewRowEditableRowIsAddedOnTheGrid() {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"New Profile form opens up")]
-        public void ThenNewProfileFormOpensUp() {
+        [When(@"I Enter (.*) and Select (.*) and Click on Add Button")]
+        public void WhenIEnterAndSelectAndClickOnAddButton(string p0, string p1) {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"I Select the profile (.*)")]
-        public void WhenISelectTheProfile(string p0) {
+        [Then(@"New Row is added in the grid and I can Validate values")]
+        public void ThenNewRowIsAddedInTheGridAndICanValidateValues(Table table) {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"I edit following details in the form and click save button")]
-        public void WhenIEditFollowingDetailsInTheFormAndClickSaveButton(Table table) {
+        [When(@"I click on Edit Icon")]
+        public void WhenIClickOnEditIcon() {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"Click Delete button")]
-        public void WhenClickDeleteButton() {
+        [When(@"Update below fields and Click Update")]
+        public void WhenUpdateBelowFieldsAndClickUpdate(Table table) {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"Profile deleted message appears")]
-        public void ThenProfileDeletedMessageAppears() {
+        [Then(@"Existing row updates with values")]
+        public void ThenExistingRowUpdatesWithValues(Table table) {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"The (.*) profile does not appear on the grid\.")]
-        public void ThenTheProfileDoesNotAppearOnTheGrid_(string p0) {
+        [When(@"I click on Delete Icon")]
+        public void WhenIClickOnDeleteIcon() {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"Click view button")]
-        public void WhenClickViewButton() {
+        [Then(@"Row is deleted")]
+        public void ThenRowIsDeleted() {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"Selected profile opens up on the page")]
-        public void ThenSelectedProfileOpensUpOnThePage() {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"I am able to validate all critical profile details successfully")]
-        public void ThenIAmAbleToValidateAllCriticalProfileDetailsSuccessfully(Table table) {
-            ScenarioContext.Current.Pending();
-        }
 
     }
 }

@@ -75,13 +75,13 @@ namespace MarsQA_1.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add a new seller profile successfully")]
+        [NUnit.Framework.DescriptionAttribute("Add New Language")]
         [NUnit.Framework.CategoryAttribute("Regression")]
-        public virtual void AddANewSellerProfileSuccessfully()
+        public virtual void AddNewLanguage()
         {
             string[] tagsOfScenario = new string[] {
                     "Regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a new seller profile successfully", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add New Language", null, new string[] {
                         "Regression"});
 #line 10
 this.ScenarioInitialize(scenarioInfo);
@@ -109,41 +109,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "username",
-                            "password",
-                            "title",
-                            "job",
-                            "profileName"});
-                table1.AddRow(new string[] {
-                            "wow",
-                            "wow1",
-                            "QA",
-                            "FT",
-                            "hello1"});
 #line 13
- testRunner.When("I enter following details in the form and click save button", ((string)(null)), table1, "When ");
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 14
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 16
- testRunner.Then("Details Saved message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I Enter <language> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "language",
+                            "proficiency"});
+                table1.AddRow(new string[] {
+                            "english",
+                            "native"});
 #line 17
- testRunner.And("The new created profiles shows up in the grid with profile name <profileName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table1, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add multiple(2) seller seller profiles successfully")]
+        [NUnit.Framework.DescriptionAttribute("Add and Edit Language")]
         [NUnit.Framework.CategoryAttribute("Regression")]
-        public virtual void AddMultiple2SellerSellerProfilesSuccessfully()
+        public virtual void AddAndEditLanguage()
         {
             string[] tagsOfScenario = new string[] {
                     "Regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add multiple(2) seller seller profiles successfully", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Edit Language", null, new string[] {
                         "Regression"});
-#line 20
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -163,218 +163,911 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
+#line 23
  testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 24
  testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "username",
-                            "password",
-                            "title",
-                            "job",
-                            "profileName"});
-                table2.AddRow(new string[] {
-                            "wow",
-                            "wow1",
-                            "QA",
-                            "FT",
-                            "hello1"});
-#line 23
- testRunner.When("I enter following details in the form and click save button", ((string)(null)), table2, "When ");
+#line 25
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
- testRunner.Then("Details Saved message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.And("The new created profiles shows up in the grid with profile name <profileName1>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 28
- testRunner.When("I Click on New Profile button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I Enter <language> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "language",
+                            "proficiency"});
+                table2.AddRow(new string[] {
+                            "english",
+                            "native"});
 #line 29
- testRunner.Then("New Profile form opens up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table2, "Then ");
+#line hidden
+#line 32
+ testRunner.When("I click on Edit Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "username",
-                            "password",
-                            "title",
-                            "job",
-                            "profileName2"});
+                            "Language"});
                 table3.AddRow(new string[] {
-                            "wow",
-                            "wow12",
-                            "QA",
-                            "FT",
-                            "hello2"});
-#line 30
- testRunner.When("I enter following details in the form and click save button", ((string)(null)), table3, "When ");
-#line hidden
+                            "french"});
 #line 33
- testRunner.Then("Details Saved message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 34
- testRunner.Then("The new created profiles shows up in the grid with profile name <profileName2>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit a seller profile successfully")]
-        [NUnit.Framework.CategoryAttribute("Regression")]
-        public virtual void EditASellerProfileSuccessfully()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "Regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit a seller profile successfully", null, new string[] {
-                        "Regression"});
-#line 37
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 38
- testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 39
- testRunner.When("I Select the profile <profileName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Update below fields and Click Update", ((string)(null)), table3, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "username",
-                            "password",
-                            "title",
-                            "job",
-                            "profileName"});
+                            "language",
+                            "proficiency"});
                 table4.AddRow(new string[] {
-                            "wow",
-                            "wow1",
-                            "QA",
-                            "FT",
-                            "hello1"});
-#line 40
- testRunner.And("I edit following details in the form and click save button", ((string)(null)), table4, "And ");
+                            "french",
+                            "native"});
+#line 36
+ testRunner.Then("Existing row updates with values", ((string)(null)), table4, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Delete Language")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndDeleteLanguage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Delete Language", null, new string[] {
+                        "Regression"});
+#line 41
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 42
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 43
- testRunner.Then("Details Saved message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 44
- testRunner.Then("The new created profiles shows up in the grid with profile name <profileName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete a seller profile successfully")]
-        [NUnit.Framework.CategoryAttribute("Regression")]
-        public virtual void DeleteASellerProfileSuccessfully()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "Regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a seller profile successfully", null, new string[] {
-                        "Regression"});
+#line 45
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 46
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
 #line 47
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 48
- testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 49
- testRunner.When("I Select the profile <profileName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 50
- testRunner.And("click Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 51
- testRunner.Then("Profile deleted message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 52
- testRunner.Then("The <profileName> profile does not appear on the grid.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Search and view an existing seller profile successfully")]
-        [NUnit.Framework.CategoryAttribute("Regression")]
-        public virtual void SearchAndViewAnExistingSellerProfileSuccessfully()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "Regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search and view an existing seller profile successfully", null, new string[] {
-                        "Regression"});
-#line 55
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 56
- testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 57
- testRunner.And("I select <profileName> profile and click view button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 58
- testRunner.Then("Selected profile opens up on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I Enter <language> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "title",
-                            "job"});
+                            "language",
+                            "proficiency"});
                 table5.AddRow(new string[] {
-                            "QA",
-                            "FT"});
+                            "english",
+                            "native"});
+#line 48
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table5, "Then ");
+#line hidden
+#line 51
+ testRunner.When("I click on Delete Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 52
+ testRunner.Then("Row is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add New Skill")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddNewSkill()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add New Skill", null, new string[] {
+                        "Regression"});
+#line 56
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 57
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 58
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 59
- testRunner.Then("I am able to validate all critical profile details successfully", ((string)(null)), table5, "Then ");
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 60
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 61
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 62
+ testRunner.When("I Enter <skill> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "skill",
+                            "proficiency"});
+                table6.AddRow(new string[] {
+                            "c#",
+                            "expert"});
+#line 63
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table6, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Edit Skill")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndEditSkill()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Edit Skill", null, new string[] {
+                        "Regression"});
+#line 68
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 69
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 70
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 71
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 72
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 73
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 74
+ testRunner.When("I Enter <skill> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "skill",
+                            "proficiency"});
+                table7.AddRow(new string[] {
+                            "c#",
+                            "expert"});
+#line 75
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table7, "Then ");
+#line hidden
+#line 78
+ testRunner.When("I click on Edit Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Language"});
+                table8.AddRow(new string[] {
+                            "javascript"});
+#line 79
+ testRunner.And("Update below fields and Click Update", ((string)(null)), table8, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "skill",
+                            "proficiency"});
+                table9.AddRow(new string[] {
+                            "javascript",
+                            "expert"});
+#line 82
+ testRunner.Then("Existing row updates with values", ((string)(null)), table9, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Delete Skill")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndDeleteSkill()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Delete Skill", null, new string[] {
+                        "Regression"});
+#line 87
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 88
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 89
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 90
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 91
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 92
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 93
+ testRunner.When("I Enter <skill> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "skill",
+                            "proficiency"});
+                table10.AddRow(new string[] {
+                            "c#",
+                            "expert"});
+#line 94
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table10, "Then ");
+#line hidden
+#line 97
+ testRunner.When("I click on Delete Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 98
+ testRunner.Then("Row is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add New Education")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddNewEducation()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add New Education", null, new string[] {
+                        "Regression"});
+#line 102
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 103
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 104
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 105
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 106
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 107
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table11.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "BCOM",
+                            "Software",
+                            "2003"});
+#line 108
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table11, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table12.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "BCOM",
+                            "Software",
+                            "2003"});
+#line 111
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table12, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Edit Education")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndEditEducation()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Edit Education", null, new string[] {
+                        "Regression"});
+#line 116
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 117
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 118
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 119
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 120
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 121
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table13.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2003"});
+#line 122
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table13, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table14.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2003"});
+#line 125
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table14, "Then ");
+#line hidden
+#line 128
+ testRunner.When("I click on Edit Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table15.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2010"});
+#line 129
+ testRunner.And("Update below fields and Click Update", ((string)(null)), table15, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table16.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2010"});
+#line 132
+ testRunner.Then("Existing Row is added in the grid and I can Validate values", ((string)(null)), table16, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Delete Education")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndDeleteEducation()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Delete Education", null, new string[] {
+                        "Regression"});
+#line 137
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 138
+testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 139
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 140
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 141
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 142
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table17.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2003"});
+#line 143
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table17, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                            "collegeName",
+                            "country",
+                            "title",
+                            "degree",
+                            "year"});
+                table18.AddRow(new string[] {
+                            "AUT",
+                            "NZ",
+                            "B.TECH",
+                            "Software",
+                            "2003"});
+#line 146
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table18, "Then ");
+#line hidden
+#line 149
+ testRunner.When("I click on Delete Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 150
+ testRunner.Then("Row is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add New Certification")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddNewCertification()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add New Certification", null, new string[] {
+                        "Regression"});
+#line 153
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 154
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 155
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 156
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 157
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 158
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table19.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 159
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table19, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table20.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 162
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table20, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Edit Certification")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndEditCertification()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Edit Certification", null, new string[] {
+                        "Regression"});
+#line 167
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 168
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 169
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 170
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 171
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 172
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table21.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 173
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table21, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table22.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 176
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table22, "Then ");
+#line hidden
+#line 179
+ testRunner.When("I click on Edit Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table23.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2020"});
+#line 180
+ testRunner.And("Update below fields and Click Update", ((string)(null)), table23, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table24.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2020"});
+#line 183
+ testRunner.Then("Existing row updates with values", ((string)(null)), table24, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add and Delete Certification")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddAndDeleteCertification()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add and Delete Certification", null, new string[] {
+                        "Regression"});
+#line 188
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 189
+ testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 190
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 191
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 192
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 193
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table25.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 194
+ testRunner.When("I Enter following details and Click on Add Button", ((string)(null)), table25, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                            "certificateName",
+                            "from",
+                            "date"});
+                table26.AddRow(new string[] {
+                            "ISTQB Foundation",
+                            "ANZTB",
+                            "2017"});
+#line 197
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table26, "Then ");
+#line hidden
+#line 200
+ testRunner.When("I click on Delete Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 201
+ testRunner.Then("Row is deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add multiple(2) languages successfully")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
+        public virtual void AddMultiple2LanguagesSuccessfully()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add multiple(2) languages successfully", null, new string[] {
+                        "Regression"});
+#line 204
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 205
+testRunner.Given("I login to the website with <usename> and <password>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 206
+ testRunner.And("Ensure the profile page loads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 207
+ testRunner.When("I Click on the Tab <tabName>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 208
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 209
+ testRunner.Then("A New Row Editable Row is added on the Grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 210
+ testRunner.When("I Enter <language> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                            "language",
+                            "proficiency"});
+                table27.AddRow(new string[] {
+                            "english",
+                            "native"});
+#line 211
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table27, "Then ");
+#line hidden
+#line 215
+ testRunner.And("Click on Add New Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 216
+ testRunner.When("I Enter <language> and Select <proficiencyLevel> and Click on Add Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                            "language",
+                            "proficiency"});
+                table28.AddRow(new string[] {
+                            "english",
+                            "native"});
+#line 217
+ testRunner.Then("New Row is added in the grid and I can Validate values", ((string)(null)), table28, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
