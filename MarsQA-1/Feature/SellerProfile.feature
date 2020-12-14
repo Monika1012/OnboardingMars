@@ -8,53 +8,50 @@
 	## Below 3 scenarios are automated
 @Regression
 Scenario: Add New Language
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
-	When I Click on the Tab <tabName>
+	When I Click on the Tab Languages
 	And Click on Add New Button
-	Then A New Row Editable Row is added on the Grid
-	When I Enter <language> and Select <proficiencyLevel> and Click on Add Button
+	When I Enter Cantonese and Select Fluent and Click on Add Button
 	Then New Row is added in the grid and I can Validate values
-	| language | proficiency |
-	| english  | native      |
+	| language | Proficiency |
+	| Cantonese  | Fluent      |
 
 @Regression
 Scenario: Add and Edit Language
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
-	When I Click on the Tab <tabName>
+	When I Click on the Tab Languages
 	And Click on Add New Button
-	Then A New Row Editable Row is added on the Grid
-	When I Enter <language> and Select <proficiencyLevel> and Click on Add Button
+	When I Enter Spanish and Select Fluent and Click on Add Button
 	Then New Row is added in the grid and I can Validate values
-	| language | proficiency |
-	| english  | native      |
+	| language | Proficiency |
+	| Spanish  | Fluent      |
 	When I click on Edit Icon
 	And Update below fields and Click Update
 	| Language  |
-	| french |
+	| French |
 	Then Existing row updates with values
-	| language | proficiency |
-	| french  | native      |
+	| language | Proficiency |
+	| French  | Fluent      |
 
 	@Regression
 Scenario: Add and Delete Language
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
-	When I Click on the Tab <tabName>
+	When I Click on the Tab Languages
 	And Click on Add New Button
-	Then A New Row Editable Row is added on the Grid
-	When I Enter <language> and Select <proficiencyLevel> and Click on Add Button
+	When I Enter Japanese and Select Fluent and Click on Add Button
 	Then New Row is added in the grid and I can Validate values
-	| language | proficiency |
-	| english  | native      |
+	| language | Proficiency |
+	| Japanese  | Fluent      |
 	When I click on Delete Icon
 	Then Row is deleted
 	
 	## Below scenarios are not automated. They are part of Task 1.
 @Regression
 Scenario: Add New Skill
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -66,7 +63,7 @@ Scenario: Add New Skill
 
 @Regression
 Scenario: Add and Edit Skill
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -85,7 +82,7 @@ Scenario: Add and Edit Skill
 
 	@Regression
 Scenario: Add and Delete Skill
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -100,7 +97,7 @@ Scenario: Add and Delete Skill
 
 	@Regression
 Scenario: Add New Education
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -114,7 +111,7 @@ Scenario: Add New Education
 
 @Regression
 Scenario: Add and Edit Education
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -135,7 +132,7 @@ Scenario: Add and Edit Education
 
 	@Regression
 Scenario: Add and Delete Education
-Given I login to the website with <usename> and <password>
+Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -151,7 +148,7 @@ Given I login to the website with <usename> and <password>
 
 	@Regression
 Scenario: Add New Certification
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -165,7 +162,7 @@ Scenario: Add New Certification
 
 @Regression
 Scenario: Add and Edit Certification
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -186,7 +183,7 @@ Scenario: Add and Edit Certification
 
 	@Regression
 Scenario: Add and Delete Certification
-	Given I login to the website with <usename> and <password>
+	Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
@@ -202,7 +199,7 @@ Scenario: Add and Delete Certification
 
 @Regression
 Scenario: Add multiple(2) languages successfully
-Given I login to the website with <usename> and <password>
+Given I login to the MARS Application
 	And Ensure the profile page loads
 	When I Click on the Tab <tabName>
 	And Click on Add New Button
