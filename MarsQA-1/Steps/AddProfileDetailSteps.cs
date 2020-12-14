@@ -1,86 +1,83 @@
-﻿using System;
+﻿using MarsQA_1.Pages;
+using MarsQA_1.SpecflowPages.Helpers;
+using MarsQA_1.SpecflowPages.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace MarsQA_1.Steps {
     [Binding]
     public sealed class AddProfileDetailSteps {
-        [Given(@"I login to the website with (.*) and (.*)")]
-        public void GivenILoginToTheWebsiteWithAnd(string username, string password) {
-            ScenarioContext.Current.Pending();
+        [Given(@"I login to the MARS Application")]
+        public void GivenILoginToTheMARSApplication() {
+            SignIn.SigninStep();
         }
+
+        
 
         [Given(@"Ensure the profile page loads")]
         public void GivenEnsureTheProfilePageLoads() {
-            ScenarioContext.Current.Pending();
+            Profile.IsPageLoaded();
         }
 
-        [When(@"I enter following details in the form and click save button")]
-        public void WhenIEnterFollowingDetailsInTheFormAndClickSaveButton(Table table) {
-            ScenarioContext.Current.Pending();
+        [When(@"I Click on the Tab (.*)")]
+        public void WhenIClickOnTheTab(string p0) {
+            Profile.GoToTab(p0);
         }
 
-        [Then(@"Details Saved message appears")]
-        public void ThenDetailsSavedMessageAppears() {
-            ScenarioContext.Current.Pending();
+        [When(@"Click on Add New Button")]
+        public void WhenClickOnAddNewButton() {
+            Profile.ClickAddNew();
         }
 
-        [Then(@"The new created profiles shows up in the grid with profile name (.*)")]
-        public void ThenTheNewCreatedProfilesShowsUpInTheGridWithProfileName(string p0) {
-            ScenarioContext.Current.Pending();
-        }
-        //New Stuff
-        [When(@"I Click on New Profile button")]
-        public void WhenIClickOnNewProfileButton() {
-            ScenarioContext.Current.Pending();
+       
+
+        [When(@"I Enter (.*) and Select (.*) and Click on Add Button")]
+        public void WhenIEnterAndSelectAndClickOnAddButton(string language, string level) {
+            Profile.EnterLanguage(language);
+            Profile.SelectProficiencyLevel(level);
+            Profile.ClickAdd();
         }
 
-        [Then(@"New Profile form opens up")]
-        public void ThenNewProfileFormOpensUp() {
-            ScenarioContext.Current.Pending();
+        [Then(@"New Row is added in the grid and I can Validate values")]
+        public void ThenNewRowIsAddedInTheGridAndICanValidateValues(Table table) {
+            
+            dynamic values = table.CreateInstance<Languages>();
+            Profile.ValidateGridValues(values.Language, values.Proficiency);
         }
 
-        [When(@"I Select the profile (.*)")]
-        public void WhenISelectTheProfile(string p0) {
-            ScenarioContext.Current.Pending();
+        [When(@"I click on Edit Icon")]
+        public void WhenIClickOnEditIcon() {
+            Profile.ClickEdit();
         }
 
-        [When(@"I edit following details in the form and click save button")]
-        public void WhenIEditFollowingDetailsInTheFormAndClickSaveButton(Table table) {
-            ScenarioContext.Current.Pending();
+        [When(@"Update below fields and Click Update")]
+        public void WhenUpdateBelowFieldsAndClickUpdate(Table table) {
+            dynamic values = table.CreateInstance<Languages>();
+            
+            Profile.EnterLanguage(values.Language);
+            Profile.ClickUpdate();
         }
 
-        [When(@"Click Delete button")]
-        public void WhenClickDeleteButton() {
-            ScenarioContext.Current.Pending();
+        [Then(@"Existing row updates with values")]
+        public void ThenExistingRowUpdatesWithValues(Table table) {
+            dynamic values = table.CreateInstance<Languages>();
+            Profile.ValidateGridValues(values.Language, values.Proficiency);
         }
 
-        [Then(@"Profile deleted message appears")]
-        public void ThenProfileDeletedMessageAppears() {
-            ScenarioContext.Current.Pending();
+        [When(@"I click on Delete Icon")]
+        public void WhenIClickOnDeleteIcon() {
+            Profile.ClickDelete();
         }
 
-        [Then(@"The (.*) profile does not appear on the grid\.")]
-        public void ThenTheProfileDoesNotAppearOnTheGrid_(string p0) {
-            ScenarioContext.Current.Pending();
+        [Then(@"Row is deleted")]
+        public void ThenRowIsDeleted() {
+            Profile.NoRowExists();
         }
 
-        [When(@"Click view button")]
-        public void WhenClickViewButton() {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"Selected profile opens up on the page")]
-        public void ThenSelectedProfileOpensUpOnThePage() {
-            ScenarioContext.Current.Pending();
-        }
-
-        [Then(@"I am able to validate all critical profile details successfully")]
-        public void ThenIAmAbleToValidateAllCriticalProfileDetailsSuccessfully(Table table) {
-            ScenarioContext.Current.Pending();
-        }
 
     }
 }

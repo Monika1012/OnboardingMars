@@ -5,60 +5,215 @@
 	The people seeking for some skills can look into my details.
 
 
+	## Below 3 scenarios are automated
+@Regression
+Scenario: Add New Language
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab Languages
+	And Click on Add New Button
+	When I Enter Cantonese and Select Fluent and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| language | Proficiency |
+	| Cantonese  | Fluent      |
 
 @Regression
-Scenario: Add a new seller profile successfully
-	Given I login to the website with <usename> and <password>
+Scenario: Add and Edit Language
+	Given I login to the MARS Application
 	And Ensure the profile page loads
-	When I Click on New Profile button
-	Then New Profile form opens up
-	When I enter following details in the form and click save button
-	| username | password | title | job | profileName |
-	| wow      | wow1     | QA    | FT  | hello1      |
-	Then Details Saved message appears
-	And The new created profiles shows up in the grid with profile name <profileName>
+	When I Click on the Tab Languages
+	And Click on Add New Button
+	When I Enter Spanish and Select Fluent and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| language | Proficiency |
+	| Spanish  | Fluent      |
+	When I click on Edit Icon
+	And Update below fields and Click Update
+	| Language  |
+	| French |
+	Then Existing row updates with values
+	| language | Proficiency |
+	| French  | Fluent      |
 
-@Regression
-Scenario: Add multiple(2) seller seller profiles successfully
-	Given I login to the website with <usename> and <password>
+	@Regression
+Scenario: Add and Delete Language
+	Given I login to the MARS Application
 	And Ensure the profile page loads
-	When I enter following details in the form and click save button
-	| username | password | title | job | profileName |
-	| wow      | wow1     | QA    | FT  | hello1      |
-	Then Details Saved message appears
-	And The new created profiles shows up in the grid with profile name <profileName1>
-	When I Click on New Profile button
-	Then New Profile form opens up
-	When I enter following details in the form and click save button
-	| username | password | title | job | profileName2 |
-	| wow      | wow12    | QA    | FT  | hello2     |
-	Then Details Saved message appears
-	Then The new created profiles shows up in the grid with profile name <profileName2>
+	When I Click on the Tab Languages
+	And Click on Add New Button
+	When I Enter Japanese and Select Fluent and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| language | Proficiency |
+	| Japanese  | Fluent      |
+	When I click on Delete Icon
+	Then Row is deleted
 	
+	## Below scenarios are not automated. They are part of Task 1.
 @Regression
-Scenario: Edit a seller profile successfully
-	Given I login to the website with <usename> and <password>
-	When I Select the profile <profileName>
-	And I edit following details in the form and click save button
-	| username | password | title | job | profileName |
-	| wow      | wow1     | QA    | FT  | hello1      |
-	Then Details Saved message appears
-	Then The new created profiles shows up in the grid with profile name <profileName>
+Scenario: Add New Skill
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter <skill> and Select <proficiencyLevel> and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| skill | proficiency |
+	| c#  | expert      |
 
 @Regression
-Scenario: Delete a seller profile successfully
-	Given I login to the website with <usename> and <password>
-	When I Select the profile <profileName>
-	And Click Delete button
-	Then Profile deleted message appears
-	Then The <profileName> profile does not appear on the grid.
+Scenario: Add and Edit Skill
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter <skill> and Select <proficiencyLevel> and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| skill | proficiency |
+	| c#  | expert      |
+	When I click on Edit Icon
+	And Update below fields and Click Update
+	| Language  |
+	| javascript |
+	Then Existing row updates with values
+	| skill | proficiency |
+	| javascript  | expert      |
+
+	@Regression
+Scenario: Add and Delete Skill
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter <skill> and Select <proficiencyLevel> and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| skill | proficiency |
+	| c#  | expert      |
+	When I click on Delete Icon
+	Then Row is deleted
+
+
+	@Regression
+Scenario: Add New Education
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      | BCOM  | Software | 2003 |
+	Then New Row is added in the grid and I can Validate values
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      | BCOM  | Software | 2003 |
 
 @Regression
-Scenario: Search and view an existing seller profile successfully
-	Given I login to the website with <usename> and <password>
-	When I Select the profile <profileName>
-	And Click view button
-	Then Selected profile opens up on the page
-	Then I am able to validate all critical profile details successfully
-	| title | job |
-	| QA    | FT  |
+Scenario: Add and Edit Education
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      |B.TECH  | Software | 2003 |
+	Then New Row is added in the grid and I can Validate values
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      | B.TECH  | Software | 2003 |
+	When I click on Edit Icon
+	And Update below fields and Click Update
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      |B.TECH  | Software | 2010 |
+	Then Existing Row is added in the grid and I can Validate values
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      | B.TECH  | Software | 2010 |
+
+	@Regression
+Scenario: Add and Delete Education
+Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      |B.TECH  | Software | 2003 |
+	Then New Row is added in the grid and I can Validate values
+	| collegeName | country | title | degree   | year |
+	| AUT         | NZ      | B.TECH  | Software | 2003 |
+	When I click on Delete Icon
+	Then Row is deleted
+
+	@Regression
+Scenario: Add New Certification
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| certificateName | from | date |
+	| ISTQB Foundation         | ANZTB      |2017  |
+	Then New Row is added in the grid and I can Validate values
+	| certificateName | from | date |
+	| ISTQB Foundation | ANZTB |2017  |
+
+@Regression
+Scenario: Add and Edit Certification
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| certificateName | from | date |
+	| ISTQB Foundation         | ANZTB      |2017  |
+	Then New Row is added in the grid and I can Validate values
+	| certificateName | from | date |
+	| ISTQB Foundation | ANZTB |2017  |
+	When I click on Edit Icon
+	And Update below fields and Click Update
+	| certificateName | from | date |
+	| ISTQB Foundation         | ANZTB      |2020  |
+	Then Existing row updates with values
+	| certificateName | from | date |
+	| ISTQB Foundation         | ANZTB      |2020  |
+
+	@Regression
+Scenario: Add and Delete Certification
+	Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter following details and Click on Add Button
+	| certificateName | from | date |
+	| ISTQB Foundation         | ANZTB      |2017  |
+	Then New Row is added in the grid and I can Validate values
+	| certificateName | from | date |
+	| ISTQB Foundation | ANZTB |2017  |
+	When I click on Delete Icon
+	Then Row is deleted
+
+@Regression
+Scenario: Add multiple(2) languages successfully
+Given I login to the MARS Application
+	And Ensure the profile page loads
+	When I Click on the Tab <tabName>
+	And Click on Add New Button
+	Then A New Row Editable Row is added on the Grid
+	When I Enter <language> and Select <proficiencyLevel> and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| language | proficiency |
+	| english  | native      |
+
+	And Click on Add New Button
+	When I Enter <language> and Select <proficiencyLevel> and Click on Add Button
+	Then New Row is added in the grid and I can Validate values
+	| language | proficiency |
+	| english  | native      |
+	
+
+	

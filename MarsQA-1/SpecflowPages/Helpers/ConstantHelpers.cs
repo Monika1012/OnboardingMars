@@ -8,16 +8,17 @@ namespace MarsQA_1.Helpers
 {
     public class ConstantHelpers
     {
+        public static string BaseDirectory = AppDomain.CurrentDomain.BaseDirectory;
         //Base Url
         public static string Url = "http://localhost:5000";
 
         //ScreenshotPath
-        public static string ScreenshotPath = "";
+        public static string ScreenshotPath = BaseDirectory;
 
         //ExtentReportsPath
-        public static string ReportsPath = "";
+        public static string ReportsPath = BaseDirectory + "/report.html";
 
         //ReportXML Path
-        public static string ReportXMLPath = "";
+        public static string ReportXMLPath = BaseDirectory + "/report.xml";
     }
 }
